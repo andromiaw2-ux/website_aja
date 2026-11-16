@@ -1,0 +1,608 @@
+
+/* =================================
+   GLOBAL SETTINGS
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0d0d18;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =================================
+   NAVIGATION
+================================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 10%;
+    background: rgba(13, 13, 24, 0.95);
+    border-bottom: 1px solid #29293b;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(15px);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #a78bfa;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-size: 13px;
+    color: #b9b9c9;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #a78bfa;
+}
+
+
+/* =================================
+   HERO SECTION
+================================= */
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding: 70px 20px;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            #30225c 0%,
+            #17132d 35%,
+            #0d0d18 75%
+        );
+}
+
+.hero-content {
+    max-width: 850px;
+    z-index: 2;
+}
+
+.welcome {
+    color: #a78bfa;
+    font-size: 12px;
+    letter-spacing: 4px;
+    font-weight: 600;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 72px);
+    line-height: 1.2;
+    margin: 25px 0;
+    font-weight: 800;
+}
+
+.hero h1 strong {
+    color: #a78bfa;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: auto;
+    color: #b9b9c9;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.primary-button {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 14px 30px;
+    background: #8b5cf6;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.primary-button:hover {
+    background: #6d28d9;
+    transform: translateY(-4px);
+}
+
+.hero-decoration {
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+    font-size: 150px;
+    font-weight: 800;
+    color: rgba(167, 139, 250, 0.04);
+    pointer-events: none;
+}
+
+
+/* =================================
+   GENERAL SECTION
+================================= */
+
+.section {
+    padding: 100px 10%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-heading span {
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: #a78bfa;
+    font-weight: 600;
+}
+
+.section-heading h2 {
+    font-size: 36px;
+    margin-top: 12px;
+    font-weight: 700;
+}
+
+.section-heading p {
+    color: #9999aa;
+    font-size: 13px;
+    margin-top: 12px;
+}
+
+
+/* =================================
+   ABOUT ME
+================================= */
+
+.about-card {
+    max-width: 850px;
+    margin: auto;
+    padding: 45px;
+    text-align: center;
+
+    background: #181827;
+    border: 1px solid #303047;
+    border-radius: 22px;
+
+    transition: 0.3s;
+}
+
+.about-card:hover {
+    border-color: #8b5cf6;
+    transform: translateY(-5px);
+}
+
+.about-icon {
+    font-size: 35px;
+    color: #a78bfa;
+    margin-bottom: 20px;
+}
+
+.about-card p {
+    color: #b9b9c9;
+    font-size: 14px;
+    line-height: 2.1;
+}
+
+.about-card strong {
+    color: #ffffff;
+}
+
+.school-label {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 22px;
+    background: #29203f;
+    color: #c4b5fd;
+    border-radius: 30px;
+    font-size: 12px;
+}
+
+
+/* =================================
+   HOBBIES
+================================= */
+
+.hobby-section {
+    background: #121220;
+}
+
+.hobby-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.hobby-card {
+    background: #1a1a2b;
+    border: 1px solid #303047;
+    border-radius: 20px;
+    padding: 35px 25px;
+    transition: 0.3s;
+}
+
+.hobby-card:hover {
+    transform: translateY(-10px);
+    border-color: #a78bfa;
+    background: #211b38;
+}
+
+.hobby-icon {
+    font-size: 42px;
+    margin-bottom: 25px;
+}
+
+.hobby-card h3 {
+    font-size: 19px;
+    margin-bottom: 15px;
+}
+
+.hobby-card p {
+    color: #a5a5b6;
+    font-size: 13px;
+    line-height: 2;
+}
+
+
+/* =================================
+   FAVORITE MUSIC
+================================= */
+
+.music-card {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 40px;
+    max-width: 950px;
+    margin: auto;
+    padding: 35px;
+
+    background: #181827;
+    border: 1px solid #303047;
+    border-radius: 22px;
+}
+
+.music-cover {
+    min-height: 300px;
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        radial-gradient(circle at 30% 20%, #a78bfa, transparent 45%),
+        linear-gradient(135deg, #3c236d, #151020);
+}
+
+.music-symbol {
+    font-size: 100px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.music-cover span {
+    font-weight: 800;
+    letter-spacing: 4px;
+    font-size: 17px;
+}
+
+.music-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.music-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #a78bfa;
+}
+
+.music-information h3 {
+    font-size: 32px;
+    margin-top: 10px;
+}
+
+.artist {
+    color: #a78bfa;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.music-description {
+    color: #a5a5b6;
+    font-size: 13px;
+    line-height: 1.9;
+    margin: 20px 0;
+}
+
+.spotify-player {
+    border-radius: 12px;
+    width: 100%;
+}
+
+.spotify-link {
+    margin-top: 15px;
+    color: #a78bfa;
+    font-size: 12px;
+}
+
+
+/* =================================
+   FAVORITE VIDEO
+================================= */
+
+.video-section {
+    background: #121220;
+}
+
+.video-card {
+    max-width: 850px;
+    margin: auto;
+    padding: 25px;
+
+    background: #1a1a2b;
+    border: 1px solid #303047;
+    border-radius: 22px;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: none;
+}
+
+.video-information {
+    padding: 25px 5px 5px;
+}
+
+.video-label {
+    color: #a78bfa;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.video-information h3 {
+    font-size: 21px;
+    margin: 12px 0;
+}
+
+.video-information p {
+    color: #a5a5b6;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* =================================
+   FOOTER / SOCIAL MEDIA
+================================= */
+
+footer {
+    background: #090911;
+    padding: 75px 10% 25px;
+    border-top: 1px solid #29293b;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-label {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #a78bfa;
+}
+
+.footer-content h2 {
+    font-size: 32px;
+    margin: 15px 0;
+}
+
+.footer-content p {
+    color: #9999aa;
+    font-size: 13px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin: 35px 0 60px;
+}
+
+.social-links a {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    padding: 17px 28px;
+    min-width: 180px;
+
+    border: 1px solid #39344e;
+    border-radius: 14px;
+
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.social-links a span {
+    color: #a78bfa;
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.social-links a:hover {
+    background: #29203f;
+    border-color: #a78bfa;
+    transform: translateY(-5px);
+}
+
+.footer-bottom {
+    border-top: 1px solid #29293b;
+    padding-top: 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo {
+    font-size: 20px;
+    font-weight: 800;
+    color: #a78bfa;
+}
+
+.footer-bottom p {
+    color: #777788;
+    font-size: 11px;
+    text-align: center;
+}
+
+.back-to-top {
+    color: #a78bfa;
+    font-size: 12px;
+}
+
+
+/* =================================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        padding: 20px 5%;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .section {
+        padding: 75px 6%;
+    }
+
+    .hobby-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .music-card {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .music-cover {
+        min-height: 230px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 17px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 75vh;
+    }
+
+    .welcome {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .section-heading h2 {
+        font-size: 29px;
+    }
+
+    .about-card {
+        padding: 25px;
+    }
+
+    .music-card {
+        padding: 20px;
+    }
+
+    .video-card {
+        padding: 15px;
+    }
+
+    .footer-content h2 {
+        font-size: 25px;
+    }
+
+    .social-links {
+        flex-direction: column;
+    }
+
+    .social-links a {
+        width: 100%;
+    }
+}
